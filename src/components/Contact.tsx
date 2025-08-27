@@ -126,7 +126,7 @@ const Contact: React.FC = () => {
     {
       icon: Github,
       name: 'GitHub',
-      url: 'https://github.com/muparikGuray',
+      url: 'https://github.com/mubarikguray',
       color: 'hover:text-red-800 dark:hover:text-red-400'
     },
     {
@@ -138,13 +138,13 @@ const Contact: React.FC = () => {
     {
       icon: Twitter,
       name: 'X (Twitter)',
-      url: 'https://twitter.com/placeholder',
+      url: 'https://twitter.com/mubarikguray',
       color: 'hover:text-red-800 dark:hover:text-red-400'
     },
     {
       icon: Mail,
-      name: 'Behance',
-      url: 'https://behance.net/placeholder',
+      name: 'Email',
+      url: 'mailto:mubarikcabdi143@gmail.com',
       color: 'hover:text-red-800 dark:hover:text-red-400'
     }
   ];

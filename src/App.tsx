@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import { ThemeProvider } from './context/ThemeContext';
+import SEO from './components/SEO';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -14,6 +16,7 @@ import AdminPanel from './components/AdminPanel';
 function App() {
   const MainSite = () => (
     <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
+      <SEO />
       <Navbar />
       <Hero />
       <About />
@@ -36,14 +39,16 @@ function App() {
   );
 
   return (
-    <ThemeProvider>
-      <Router>
-        <Routes>
-          <Route path="/" element={<MainSite />} />
-          <Route path="/admin" element={<AdminPanel />} />
-        </Routes>
-      </Router>
-    </ThemeProvider>
+    <HelmetProvider>
+      <ThemeProvider>
+        <Router>
+          <Routes>
+            <Route path="/" element={<MainSite />} />
+            <Route path="/admin" element={<AdminPanel />} />
+          </Routes>
+        </Router>
+      </ThemeProvider>
+    </HelmetProvider>
   );
 }
 

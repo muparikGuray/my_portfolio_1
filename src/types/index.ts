@@ -6,6 +6,8 @@ export interface Project {
   techStack: string[];
   liveUrl: string;
   githubUrl: string;
+  status: 'active' | 'completed' | 'draft';
+  featured: boolean;
 }
 
 export interface Skill {

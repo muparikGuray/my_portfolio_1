@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code, Brain, Zap, Users } from 'lucide-react';
+import { Code, Brain, Zap, Users, MapPin, Calendar, Award } from 'lucide-react';
 
 const About: React.FC = () => {
   const highlights = [
@@ -45,7 +45,7 @@ const About: React.FC = () => {
             About Me
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            Passionate about creating intelligent solutions that make a difference
+            Software Engineer Student & AI SaaS Builder from Hargeisa, Somaliland
           </p>
         </motion.div>
 
@@ -57,13 +57,16 @@ const About: React.FC = () => {
             transition={{ duration: 0.8 }}
           >
             <div className="relative">
-              <div className="w-80 h-80 mx-auto lg:mx-0 rounded-2xl overflow-hidden shadow-2xl">
+              <div className="w-80 h-80 mx-auto lg:mx-0 rounded-2xl overflow-hidden shadow-2xl border-4 border-primary-200 dark:border-primary-800">
                 <img
-                  src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg"
+                  src="/profile-photo.jpg"
                   alt="Mubarik Guray"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-blue-600/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary-600/20 to-transparent" />
+              </div>
+              <div className="absolute -bottom-4 -right-4 bg-white dark:bg-gray-800 rounded-full p-3 shadow-lg border border-primary-200 dark:border-primary-700">
+                <Award className="w-6 h-6 text-primary-600" />
               </div>
             </div>
           </motion.div>
@@ -74,26 +77,49 @@ const About: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
+            <div className="flex items-center mb-4">
+              <MapPin className="w-5 h-5 text-primary-600 mr-2" />
+              <span className="text-primary-600 font-semibold">Hargeisa, Somaliland 🇸🇴</span>
+            </div>
+            
+            <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
               Building the Future of AI in Africa
             </h3>
+            
             <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
-              As a Software Engineer Student from Hargeisa, Somaliland, I'm passionate about 
-              leveraging AI and modern web technologies to solve real-world problems. My vision 
-              is to build a tech company that develops innovative applications for businesses and students.
+              I'm a passionate Software Engineer Student specializing in AI-powered SaaS development. 
+              My mission is to bridge the technology gap in Africa by creating innovative solutions 
+              that serve local markets while maintaining global standards.
             </p>
+            
             <p className="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
-              I specialize in creating AI-powered applications with multilingual support, 
-              including Somali and English interfaces. From university management systems 
-              to desktop chatbots, I focus on building solutions that serve local markets 
-              while maintaining global standards.
+              From university management systems to multilingual AI chatbots, I focus on 
+              creating technology that empowers businesses and educational institutions 
+              across the Horn of Africa region.
             </p>
+
+            <div className="grid grid-cols-2 gap-4 mb-8">
+              <div className="flex items-center p-3 bg-primary-50 dark:bg-primary-900/20 rounded-lg">
+                <Calendar className="w-5 h-5 text-primary-600 mr-2" />
+                <div>
+                  <div className="text-sm text-gray-600 dark:text-gray-400">Experience</div>
+                  <div className="font-semibold text-gray-900 dark:text-white">5+ Years</div>
+                </div>
+              </div>
+              <div className="flex items-center p-3 bg-secondary-50 dark:bg-secondary-900/20 rounded-lg">
+                <Award className="w-5 h-5 text-secondary-600 mr-2" />
+                <div>
+                  <div className="text-sm text-gray-600 dark:text-gray-400">Projects</div>
+                  <div className="font-semibold text-gray-900 dark:text-white">50+ Completed</div>
+                </div>
+              </div>
+            </div>
 
             <div className="flex flex-wrap gap-2 mb-8">
               {skills.map((skill) => (
                 <span
                   key={skill}
-                  className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-sm font-medium"
+                  className="px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-800 dark:text-primary-300 rounded-full text-sm font-medium hover:bg-primary-200 dark:hover:bg-primary-800/50 transition-colors duration-200"
                 >
                   {skill}
                 </span>
