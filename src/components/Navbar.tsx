@@ -124,7 +124,6 @@ const Navbar: React.FC = () => {
               <motion.button
                 key={item.label}
                 onClick={() => scrollToSection(item.href)}
-                className="block w-full text-left px-4 py-2 text-gray-800 dark:text-gray-200 hover:text-red-800 dark:hover:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/30 rounded-lg mx-2 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-red-800/50"
                 className="block w-full text-left px-4 py-2 text-gray-800 dark:text-gray-200 hover:text-primary-700 dark:hover:text-primary-400 hover:bg-primary-50 dark:hover:bg-primary-900/30 rounded-lg mx-2 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary-700/50"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
